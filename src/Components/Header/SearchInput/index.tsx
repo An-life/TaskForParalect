@@ -14,6 +14,7 @@ export const SearchInput =({userNameHandler}:InputPropsType)=> {
     let inputOnKeyPressHandler=(event:KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             userNameHandler(user);
+            setUser('');
           }
     };
     

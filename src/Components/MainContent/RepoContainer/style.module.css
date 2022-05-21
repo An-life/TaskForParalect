@@ -1,0 +1,29 @@
+.repoContainer{
+background-color: #FFFFFF;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 24px 32px;
+gap: 16px;
+border-radius: 6px;
+margin-bottom: 24px;
+}
+
+.title{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0064EB;  
+}
+
+.description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
