@@ -9,56 +9,15 @@
     z-index: 1;
 }
 
-.inputContainer{
-    width: 500px;
-    height: 40px;
-    border-radius: 6px;
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 41px 0 0;
-}
+
 
 .gitHubLogo{
     height: 40px;
     margin: 0 22px 0 41px;
 }
 
-.searchIcon{
-    margin: 0 11px 0 19px;
-}
-
-.inputFill{
-    border: none;
-    height: 24px;
-    width: 300px;
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.01em;
-}
-
-.inputFill:focus{
-    outline: none;
-    border: none;
-}
-
 @media (max-width: 600px) {
     .gitHubLogo{
         margin: 0 5px;
-    }
-
-    .inputFill{
-        width: 200px;
-    }
-
-    .inputContainer{
-               margin: 0 5px 0 0;
     }
 }
