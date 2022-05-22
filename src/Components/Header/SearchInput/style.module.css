@@ -1,4 +1,4 @@
-.inputContainer{
+.inputContainer {
     max-width: 500px;
     height: 40px;
     border-radius: 6px;
@@ -9,11 +9,11 @@
     margin: 0 41px 0 0;
 }
 
-.searchIcon{
+.searchIcon {
     margin: 0 11px 0 19px;
 }
 
-.inputFill{
+.inputFill {
     border: none;
     height: 24px;
     width: 300px;
@@ -28,24 +28,24 @@
     letter-spacing: 0.01em;
 }
 
-.inputFill:focus{
+.inputFill:focus {
     outline: none;
     border: none;
 }
 
 @media (max-width: 600px) {
-    .inputContainer{
+    .inputContainer {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0;
     }
 
-    .inputFill{
-       width: 200px;
+    .inputFill {
+        width: 200px;
     }
 
-    .inputContainer{
-     margin: 0 5px 0 10px;
+    .inputContainer {
+        margin: 0 5px 0 10px;
     }
 }

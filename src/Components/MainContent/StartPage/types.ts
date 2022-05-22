@@ -1,4 +1,4 @@
-export type StartPagePropsType={
-    text:string;
-    children:React.ReactNode;
-  }
+export type StartPagePropsType = {
+    text: string;
+    children: React.ReactNode;
+}

@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 import style from './App.module.css';
 import {Header} from './Components/Header/';
 import {MainContent} from './Components/MainContent/'
 
 
-function App() {
-  const [userName, setUserName]=useState<string|null>(null);
+const App = () => {
+    const [userName, setUserName] = useState<string | null>(null);
 
-  let userNameHandler=(user:string)=>{setUserName(user)};
-  
-  return (
-    <div className={style.appContainer}>
-      <Header userNameHandler={userNameHandler}/>
-      <MainContent userName={userName}/>
-    </div>
-  );
+    let userNameHandler = (user: string) => {
+        setUserName(user)
+    };
+
+    return (
+        <div className={style.appContainer}>
+            <Header userNameHandler={userNameHandler}/>
+            <MainContent userName={userName}/>
+        </div>
+    );
 }
 
 export default App;

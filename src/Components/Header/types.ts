@@ -1,3 +1,3 @@
-export type HeaderPropsType={
-    userNameHandler:(user:string) =>void;
+export type HeaderPropsType = {
+    userNameHandler: (user: string) => void;
 }

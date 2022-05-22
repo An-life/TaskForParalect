@@ -1,4 +1,4 @@
-.contentContainer{
+.contentContainer {
     width: 225px;
     height: 196px;
     font-family: 'Inter', sans-serif;
@@ -14,6 +14,6 @@
     align-items: center;
 }
 
-.searchIcon{
+.searchIcon {
     margin-bottom: 20px;
 }
