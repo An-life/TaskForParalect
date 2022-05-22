@@ -14,6 +14,9 @@ export const ReposPage = ({repos}: ReposPagePropsType) => {
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 4;
+    let firstRepoIndex=itemOffset+1;
+    let lastRepoIndex=itemOffset+currentItems.length;
+    
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
@@ -30,8 +33,10 @@ export const ReposPage = ({repos}: ReposPagePropsType) => {
         <div>
             {repos.length ? <div>
                     <div className={style.repoTitle}>Repositories ({repos.length})</div>
-                    <div>
+                    <div >
                         {currentItems.map(item => <RepoContainer name={item.name} description={item.description}/>)}
+                        <div className={style.reposPagination}>
+                        <p className={style.repoItems}>{firstRepoIndex}-{lastRepoIndex} of {repos.length} items</p>
                         <ReactPaginate
                             breakLabel="..."
                             nextLabel=">"
@@ -43,8 +48,8 @@ export const ReposPage = ({repos}: ReposPagePropsType) => {
                             containerClassName={style.pagination}
                             pageClassName={style.pageNum}
                             previousLinkClassName={style.nextPage}
-                            nextLinkClassName={style.nextPage}
-                            activeLinkClassName={style.active}/>
+                            nextLinkClassName={style.lastPage}
+                            activeLinkClassName={style.active}/></div>
                     </div>
                 </div> :
                 <div className={style.emptyRepos}><StartPage text={startPageOptions.noRepos.text}>{startPageOptions.noRepos.icon}</StartPage></div>

@@ -21,7 +21,7 @@ export const UserPage = ({userData}: UserPageType) => {
                     <div className={style.followers}><SmallUserIcon/> {userData.following} following</div>
                 </div>
             </div>
-            <div>
+            <div className={style.repos}>
               <ReposPage repos={userData.repos}/>
             </div>
         </div>
