@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EmptyIcon = () => {
+export const EmptyReposIcon = () => {
 
     return (
         <svg

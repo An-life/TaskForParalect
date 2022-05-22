@@ -1,7 +1,8 @@
 .userPageContainer{
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -34,7 +35,10 @@
     line-height: 22px;
     color: #0064EB;
     text-decoration: none;
-    margin-bottom: 25px;
+    margin: 0 10px 25px 10px;
+}
+.userLogo:link{
+    text-decoration: none;
 }
 
 .userFollows{
@@ -50,40 +54,40 @@
     flex-direction: row;
 }
 
-.repoTitle{
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 130%;
-    color: #000000;
-    margin: 28px 0;
-}
-
-.pagination{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    font-family: 'Inter', sens-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #808080;
-    margin-top: 26px;
-}
-
-.pageNum{
-    padding: 0 8px;
-    cursor: pointer ;
-}
-
-.nextPage{
-    padding: 0 26px;
-}
-
 .followers{
     height: 22px;
+    margin-right:10px;
+}
+
+.userLink:visited{
+    color: #0064EB;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .userPageContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userDataContainer{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .userAvatar {
+        height: 270px;
+        width: 270px;
+    }
+
+    .userLogo {
+        margin-bottom: 10px;
+    }
 }

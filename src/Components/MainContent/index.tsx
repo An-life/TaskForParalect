@@ -5,8 +5,9 @@ import {StartPage} from './StartPage';
 import {UserPage} from './UserPage';
 import {useGitHubData} from "../../hooks/useGitHubData";
 import {startPageOptions} from "./constants";
+import {MainContentPropsType} from "./types";
 
-export const MainContent = ({userName}: { userName: string }) => {
+export const MainContent = ({userName}: MainContentPropsType) => {
 
     const {isLoaded, userData} = useGitHubData(userName);
 
