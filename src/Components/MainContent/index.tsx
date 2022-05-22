@@ -13,12 +13,13 @@ export const MainContent = ({userName}: MainContentPropsType) => {
 
     return (
         <div className={style.contentContainer}>
-            {!userData && <div className={style.startPageWrapper}>
-                {!userName &&
-                <StartPage text={startPageOptions.startPage.text}>{startPageOptions.startPage.icon}</StartPage>}
-                {userName && !userData && isLoaded &&
-                <StartPage text={startPageOptions.userNotFound.text}>{startPageOptions.userNotFound.icon}</StartPage>}
-                {userName && !isLoaded && <div className={style.loader}></div>}
+            {!userName && <div className={style.startPageWrapper}>
+                <StartPage text={startPageOptions.startPage.text}>{startPageOptions.startPage.icon}</StartPage></div>}
+            {userName && !userData && isLoaded && <div className={style.noUserPageWrapper}>
+                <StartPage text={startPageOptions.userNotFound.text}>{startPageOptions.userNotFound.icon}</StartPage>
+            </div>}
+            {userName && !isLoaded && <div className={style.startPageWrapper}>
+                <div className={style.loader}></div>
             </div>}
             {userData && isLoaded && <UserPage userData={userData}/>}
         </div>

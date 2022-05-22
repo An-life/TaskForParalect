@@ -7,16 +7,17 @@ import {startPageOptions} from "../constants";
 import {RepoContainer} from "../RepoContainer";
 import ReactPaginate from "react-paginate";
 import {ReposPagePropsType} from "./types";
+import {itemsPerPage, marginPagesDisplayed, pageRangeDisplayed} from "./constants";
 
 export const ReposPage = ({repos}: ReposPagePropsType) => {
 
     const [currentItems, setCurrentItems] = useState<Array<RepoType>>([]);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
-    const itemsPerPage = 4;
-    let firstRepoIndex=itemOffset+1;
-    let lastRepoIndex=itemOffset+currentItems.length;
-    
+
+    let firstRepoIndex = itemOffset + 1;
+    let lastRepoIndex = itemOffset + currentItems.length;
+
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
@@ -30,29 +31,33 @@ export const ReposPage = ({repos}: ReposPagePropsType) => {
     };
 
     return (
-        <div>
+        <div className={style.reposContainer}>
             {repos.length ? <div>
                     <div className={style.repoTitle}>Repositories ({repos.length})</div>
-                    <div >
+                    <div>
                         {currentItems.map(item => <RepoContainer name={item.name} description={item.description}/>)}
                         <div className={style.reposPagination}>
-                        <p className={style.repoItems}>{firstRepoIndex}-{lastRepoIndex} of {repos.length} items</p>
-                        <ReactPaginate
-                            breakLabel="..."
-                            nextLabel=">"
-                            onPageChange={handlePageClick}
-                            pageRangeDisplayed={3}
-                            marginPagesDisplayed={1}
-                            pageCount={pageCount}
-                            previousLabel="<"
-                            containerClassName={style.pagination}
-                            pageClassName={style.pageNum}
-                            previousLinkClassName={style.nextPage}
-                            nextLinkClassName={style.lastPage}
-                            activeLinkClassName={style.active}/></div>
+                            <p className={style.repoItems}>{firstRepoIndex}-{lastRepoIndex} of {repos.length} items</p>
+                            <ReactPaginate
+                                breakLabel="..."
+                                nextLabel=">"
+                                onPageChange={handlePageClick}
+                                pageRangeDisplayed={pageRangeDisplayed}
+                                marginPagesDisplayed={marginPagesDisplayed}
+                                pageCount={pageCount}
+                                previousLabel="<"
+                                containerClassName={style.pagination}
+                                pageClassName={style.pageNum}
+                                previousLinkClassName={style.nextPage}
+                                nextLinkClassName={style.lastPage}
+                                activeLinkClassName={style.active}/>
+                        </div>
                     </div>
                 </div> :
-                <div className={style.emptyRepos}><StartPage text={startPageOptions.noRepos.text}>{startPageOptions.noRepos.icon}</StartPage></div>
+                <div className={style.emptyRepos}>
+                    <StartPage
+                        text={startPageOptions.noRepos.text}>{startPageOptions.noRepos.icon}</StartPage>
+                </div>
             }
         </div>
     );

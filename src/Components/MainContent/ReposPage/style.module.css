@@ -1,11 +1,12 @@
-.emptyRepos{
+.emptyRepos {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 197px;
+    margin-top: 221px;
+    margin-left: 60px;
 }
 
-.repoTitle{
+.repoTitle {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -16,7 +17,7 @@
     letter-spacing: 0.03rem;
 }
 
-.pagination{
+.pagination {
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -31,13 +32,12 @@
     margin-top: 26px;
 }
 
-.pageNum{
+.pageNum {
     padding: 0 8px;
-    cursor: pointer ;
+    cursor: pointer;
 }
 
-.nextPage{
-    font-style: bolt;
+.nextPage {
     font-weight: 600;
     font-size: large;
     line-height: 21px;
@@ -46,8 +46,8 @@
     padding: 0 10px 0 0px;
 }
 
-.lastPage{
-    font-style: bolt;
+.lastPage {
+    font-style: normal;
     font-weight: 600;
     font-size: large;
     line-height: 21px;
@@ -56,23 +56,47 @@
     padding: 0 19px;
 }
 
-.reposPagination{
-font-family: 'Inter', sens-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 21px;
-color: #808080;
-display: flex;
-flex-direction: row;
-align-items: flex-end;
-justify-content: flex-end;
+.reposPagination {
+    font-family: 'Inter', sens-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
-.active{
+.active {
     color: #FFFFFF;
-    background-color:#0064EB ;
+    background-color: #0064EB;
     padding: 3px 7px;
     gap: 10px;
     border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+    .repoTitle {
+        text-align: center;
+        font-size: 20px;
+        line-height: 130%;
+        color: #000000;
+        margin: 28px 0;
+        letter-spacing: 0.03rem;
+    }
+
+    .reposPagination {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reposContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }

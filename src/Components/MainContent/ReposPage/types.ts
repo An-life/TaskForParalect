@@ -1,5 +1,5 @@
 import {ReposType} from "../../../types/common";
 
-export type ReposPagePropsType={
+export type ReposPagePropsType = {
     repos: ReposType;
 }

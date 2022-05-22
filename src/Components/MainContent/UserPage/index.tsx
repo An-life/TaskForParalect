@@ -13,7 +13,8 @@ export const UserPage = ({userData}: UserPageType) => {
             <div className={style.userDataContainer}>
                 <div><img src={userData.avatar} alt='avatar' className={style.userAvatar}/></div>
                 <div className={style.userName}>{userData.name}</div>
-                <div className={style.userLogo}>< a href={userData.url} className={style.userLink} target='_blank' rel='noreferrer'
+                <div className={style.userLogo}>< a href={userData.url} className={style.userLink} target='_blank'
+                                                    rel='noreferrer'
                 >{userData.login}</a>
                 </div>
                 <div className={style.userFollows}>
@@ -22,7 +23,7 @@ export const UserPage = ({userData}: UserPageType) => {
                 </div>
             </div>
             <div className={style.repos}>
-              <ReposPage repos={userData.repos}/>
+                <ReposPage repos={userData.repos}/>
             </div>
         </div>
     );

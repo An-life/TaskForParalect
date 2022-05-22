@@ -1,4 +1,4 @@
-.userPageContainer{
+.userPageContainer {
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -6,8 +6,8 @@
     align-items: flex-start;
 }
 
-.userDataContainer{
-    margin:39px 96px 0 57px;
+.userDataContainer {
+    margin: 39px 96px 0 57px;
 }
 
 .userAvatar {
@@ -37,11 +37,14 @@
     text-decoration: none;
     margin: 0 10px 30px 10px;
 }
-.userLogo:link{
+
+.userLogo:link {
     text-decoration: none;
 }
 
-.userFollows{
+.userFollows {
+    width: 270px;
+    height: 22px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -54,45 +57,54 @@
     flex-direction: row;
 }
 
-.followers{
-    height: 22px;
-    margin-right:10px;
-}
-
-.userLink:visited{
+.userLink:visited {
     color: #0064EB;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.repos{
+.repos {
     width: 60%;
     padding-right: 56px;
 }
 
 @media (max-width: 900px) {
-    .userPageContainer{
+    .userPageContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .userDataContainer{
-        display:flex;
+    .userDataContainer {
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
 
     .userAvatar {
-        height: 270px;
-        width: 270px;
+        height: 200px;
+        width: 200px;
+        margin-left: 40px;
     }
 
     .userLogo {
         margin-bottom: 10px;
+    }
+
+    .repos {
+        width: 80%;
+        padding-right: 10px;
+    }
+
+    .userFollows {
+        width: 200px;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }

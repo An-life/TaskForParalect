@@ -1,1 +1,1 @@
-export const searchIconSize=14;
+export const searchIconSize = 14;

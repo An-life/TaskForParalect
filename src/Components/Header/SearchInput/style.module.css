@@ -1,5 +1,5 @@
 .inputContainer {
-    max-width: 500px;
+    width: 500px;
     height: 40px;
     border-radius: 6px;
     background-color: #FFFFFF;
@@ -35,14 +35,12 @@
 
 @media (max-width: 600px) {
     .inputContainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 235px;
         margin: 0;
     }
 
     .inputFill {
-        width: 200px;
+        width: 185px;
     }
 
     .inputContainer {
