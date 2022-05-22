@@ -1,6 +1,7 @@
 import React from "react";
 
-const SearchIcon = ({iconSize}: { iconSize: number }) => {
+export const SearchIcon = ({iconSize}: { iconSize: number }) => {
+
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -18,5 +19,3 @@ const SearchIcon = ({iconSize}: { iconSize: number }) => {
         </svg>
     );
 }
-
-export default SearchIcon;

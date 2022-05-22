@@ -1,4 +1,6 @@
 .repoContainer {
+    max-width: 877px;
+    height: 112px;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;

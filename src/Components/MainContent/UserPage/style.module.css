@@ -1,7 +1,19 @@
+.userPageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.userDataContainer{
+    margin:39px 96px 0 57px;
+}
+
 .userAvatar {
     height: 280px;
     width: 280px;
     border-radius: 50%;
+    margin-bottom: 29px;
 }
 
 .userName {
@@ -11,6 +23,7 @@
     font-size: 26px;
     line-height: 130%;
     color: #000000;
+    margin-bottom: 12px;
 }
 
 .userLogo {
@@ -21,6 +34,7 @@
     line-height: 22px;
     color: #0064EB;
     text-decoration: none;
+    margin-bottom: 25px;
 }
 
 .userFollows{
@@ -30,4 +44,46 @@
     font-size: 16px;
     line-height: 150%;
     color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.repoTitle{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #000000;
+    margin: 28px 0;
+}
+
+.pagination{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Inter', sens-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+    margin-top: 26px;
+}
+
+.pageNum{
+    padding: 0 8px;
+    cursor: pointer ;
+}
+
+.nextPage{
+    padding: 0 26px;
+}
+
+.followers{
+    height: 22px;
 }
